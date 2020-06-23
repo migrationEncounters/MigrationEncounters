@@ -9,7 +9,7 @@ const Header = props => (
     </div>
     <div className="content">
       <div className="inner">
-        <h2>"An epic quote will go right here"</h2>
+        <h2>"An epic quote of legendary proportions will go right here"</h2>
       </div>
     </div>
     <nav>
