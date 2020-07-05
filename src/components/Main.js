@@ -28,7 +28,7 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">A name, a quote or a title</h2>
+          <h2 className="major">A name, a quote</h2>
           <span className="image main">
             <img src={pic01} alt="" />
           </span>
