@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import pic01 from '../images/pic01.jpg'
-import pic02 from '../images/pic02.jpg'
-import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
   render() {
@@ -68,7 +66,7 @@ class Main extends React.Component {
         >
           <h2 className="major">Research</h2>
           <span className="image main">
-            <img src={pic02} alt="" />
+            <img src={pic01} alt="" />
           </span>
           <p>
             This will also move us to a different page where the research tool will be located, needs to be fleshed out.
@@ -85,7 +83,7 @@ class Main extends React.Component {
         >
           <h2 className="major">About</h2>
           <span className="image main">
-            <img src={pic03} alt="" />
+            <img src={pic01} alt="" />
           </span>
           <p>
             Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent
