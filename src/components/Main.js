@@ -1,5 +1,6 @@
-import PropTypes from 'prop-types'
+// Import Libraries
 import React from 'react'
+import PropTypes from 'prop-types'
 import pic01 from '../images/pic01.jpg'
 
 class Main extends React.Component {

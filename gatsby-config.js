@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Migration Encounters',
-    author: 'Luis Aguilar, Claudio Gage',
+    author: 'Migration Encounters',
     description: 'Migration Encounters description Metadata',
   },
   plugins: [

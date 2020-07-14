@@ -1,4 +1,4 @@
-// Import Libraries
+// Import libraries
 import React from 'react'
 
 // Import components
@@ -17,8 +17,6 @@ export default class IndexPage extends React.Component {
       article: '',
       loading: 'is-loading'
     }
-    this.handleOpenArticle = this.handleOpenArticle.bind(this)
-    this.handleCloseArticle = this.handleCloseArticle.bind(this)
   }
 
   // Life cycle methods
@@ -45,21 +43,19 @@ export default class IndexPage extends React.Component {
     }
   }
 
-  handleCloseArticle() {
+  handleCloseArticle = () => {
     this.setState({articleTimeout: !this.state.articleTimeout}); // ?
     setTimeout(() => this.setState({timeout: !this.state.timeout}), 325); // basically controls how fast the pop up window is going to dissapear
     setTimeout(() => this.setState({isArticleVisible: !this.state.isArticleVisible, article: ''}), 350); // basically controls how fast the home content is going to be displayed again
+    return null;
   }
 
-  handleOpenArticle(article) { // recieves the articlew as a string from the header file
+  handleOpenArticle = article => { // recieves the articlew as a string from the header file
     this.setState({isArticleVisible: !this.state.isArticleVisible, article}); // that way of changing the state property is awesome
     setTimeout(() => this.setState({timeout: !this.state.timeout}), 325);
     setTimeout(() => this.setState({articleTimeout: !this.state.articleTimeout}), 350);
+    return null;
   }
-
-  
-
-  
 
   render() {
     const { location } = this.props;
