@@ -49,13 +49,16 @@ const dataObject = {
 };
 
 const TeamMembers = props => {
-
   // X on the upper right corner
   const close = () => 
-    <div
-      className="close"
-      onClick={() => {props.onCloseArticle()}}
-    />;
+  <div
+    role="button"
+    aria-label="Close Section"
+    tabIndex = {0}
+    className="close"
+    onKeyDown={() => {props.onCloseArticle()}}
+    onClick={() => {props.onCloseArticle()}}
+  />;
 
   return (
     <article // this should be a section I need to tweak it for section, currently expecting article
@@ -64,7 +67,7 @@ const TeamMembers = props => {
       style={{ display: 'none' }} // check to see if we can dynamically render
     >
       {close()}
-      <h2 className="major">
+      <h2 className="major" >
         {dataObject.section}
       </h2>
       <p>
