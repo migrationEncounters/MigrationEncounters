@@ -8,6 +8,7 @@ import pic01 from '../images/pic01.jpg'
 // Import sub-components 
 import TeamMembers from './aboutUs/teamMembers'
 import Action from './action/action'
+import InTheNews from './inTheNews/inTheNews'
 
 class Main extends React.Component {
   render() {
@@ -79,6 +80,12 @@ class Main extends React.Component {
           {close}
         </article>
 
+        <InTheNews
+          onCloseArticle={this.props.onCloseArticle}
+          article={this.props.article}
+          articleTimeout={this.props.articleTimeout}
+        />
+        
         <Action
           onCloseArticle={this.props.onCloseArticle}
           article={this.props.article}

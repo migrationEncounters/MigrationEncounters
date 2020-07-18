@@ -1,6 +1,6 @@
 // Import Libraries
 import React, { Fragment } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 // Import assets
@@ -49,7 +49,6 @@ const dataObject = {
 };
 
 const TeamMembers = props => {
-  // X on the upper right corner
   const close = () => 
   <div
     role="button"
@@ -112,6 +111,12 @@ const TeamMembers = props => {
 
     </article>
   )
+}
+
+TeamMembers.propTypes = {
+  onCloseArticle: PropTypes.func.isRequired,
+  article: PropTypes.string.isRequired,
+  articleTimeout: PropTypes.bool.isRequired
 }
 
 export default TeamMembers;

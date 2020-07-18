@@ -44,7 +44,7 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('contact')
+              props.onOpenArticle('in-the-news')
             }}
           >
             In the news
