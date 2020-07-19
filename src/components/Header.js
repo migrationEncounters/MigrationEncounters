@@ -1,5 +1,7 @@
-import PropTypes from 'prop-types'
+// Import libraries
 import React from 'react'
+import PropTypes from 'prop-types'
+import { navigate } from 'gatsby'
 
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
@@ -7,44 +9,49 @@ const Header = props => (
       {/* <span className="icon fa-diamond"></span> */}
       <h1>Migration Encounters</h1>
     </div>
+
     <div className="content">
       <div className="inner">
         <h2>"An epic quote of legendary proportions will go right here"</h2>
       </div>
     </div>
+    
     <nav>
       <ul>
         <li>
           <button
-            onClick={() => {
-              props.onOpenArticle('intro')
-            }}
+            onClick={() => navigate("/stories")}
           >
             Stories
           </button>
         </li>
         <li>
           <button
-            onClick={() => {
-              props.onOpenArticle('work')
-            }}
+            onClick={() => navigate("/research")}
           >
             Research
           </button>
         </li>
         <li>
           <button
-            onClick={() => {
-              props.onOpenArticle('contact')
-            }}
+            onClick={() => navigate("/commentary")}
           >
-            About us
+            Commentary
           </button>
         </li>
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('about')
+              props.onOpenArticle('in-the-news')
+            }}
+          >
+            In the news
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('action')
             }}
           >
             Action
@@ -53,10 +60,10 @@ const Header = props => (
         <li>
           <button
             onClick={() => {
-              props.onOpenArticle('contact')
+              props.onOpenArticle('about-us')
             }}
           >
-            In the news
+            About us
           </button>
         </li>
       </ul>

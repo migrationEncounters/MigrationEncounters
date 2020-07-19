@@ -36,7 +36,7 @@
     background-image: linear-gradient(
         to top,
         #{_palette(bg-overlay)},
-        #{_palette(bg-overlay)}
+        #{_palette(bg-overlay-lighter)}
       ),
       url('../../images/overlay.png');
     background-size: auto, 256px 256px;
@@ -55,7 +55,7 @@
       )
     );
     // background-image: url('../../images/bg.jpg'); // background image goes here
-    background-image: url('../../images/Tania_dsc9944_Patrick Montero.jpg');
+    background-image: url('../../images/bg.jpg'); // this needs to be a dynamic image
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
