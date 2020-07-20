@@ -2,9 +2,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Import assets
-import pic01 from '../images/pic01.jpg'
-
 // Import sub-components 
 import TeamMembers from './aboutUs/teamMembers'
 import Action from './action/action'
@@ -12,13 +9,6 @@ import InTheNews from './inTheNews/inTheNews'
 
 class Main extends React.Component {
   render() {
-    let close = ( // X on the upper right corner
-      <div
-        className="close"
-        onClick={() => {this.props.onCloseArticle()}}
-      />
-    )
-
     return (
       <div
         ref={this.props.setWrapperRef} // reference from the home page, used for the pop up windows
