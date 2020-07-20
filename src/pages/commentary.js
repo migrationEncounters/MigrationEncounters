@@ -5,12 +5,12 @@ import { Link } from 'gatsby'
 // Import components
 import Layout from '../components/layout'
 
-const HaverfordMembers = () => (
+const Commentary = () => (
   <Layout>
-    <h1>Haverford College Members Page</h1>
+    <h1>Commentary Page</h1>
     <p>WIP</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 );
 
-export default HaverfordMembers;
+export default Commentary;

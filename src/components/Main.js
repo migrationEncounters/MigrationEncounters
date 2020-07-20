@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-// Import sub-components 
+// Import components 
 import TeamMembers from './aboutUs/teamMembers'
 import Action from './action/action'
 import InTheNews from './inTheNews/inTheNews'
@@ -31,7 +31,7 @@ const Main = props => {
       />
     </div>
   )
-}
+};
 
 Main.propTypes = {
   route: PropTypes.object,
@@ -40,6 +40,6 @@ Main.propTypes = {
   onCloseArticle: PropTypes.func,
   timeout: PropTypes.bool,
   setWrapperRef: PropTypes.func.isRequired,
-}
+};
 
-export default Main
+export default Main;
