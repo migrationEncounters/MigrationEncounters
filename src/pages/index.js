@@ -3,9 +3,9 @@ import React from 'react'
 
 // Import components
 import Layout from '../components/layout'
-import Header from '../components/Header'
-import Main from '../components/Main'
-import Footer from '../components/Footer'
+import Header from '../components/header'
+import Main from '../components/main'
+import Footer from '../components/footer'
 
 export default class IndexPage extends React.Component {
   constructor(props) {
@@ -23,12 +23,12 @@ export default class IndexPage extends React.Component {
   componentDidMount () {
     this.timeoutId = setTimeout( () => this.setState({loading: ''}), 100); // used for the intro animation, changes class to start showing the rest, time controls wait to show the content
     document.addEventListener('mousedown', this.handleClickOutside); // for the clicking outside of the pop up window, works because it's listening to a mouse down outside of the article pop up window in this case in the wrapper div
-  }
+  };
 
   componentWillUnmount () {
     if (this.timeoutId) clearTimeout(this.timeoutId);
     document.removeEventListener('mousedown', this.handleClickOutside); 
-  }
+  };
 
   // Other methods
   setWrapperRef = node => this.wrapperRef = node; // references the main div, actually any node you pass
@@ -41,21 +41,21 @@ export default class IndexPage extends React.Component {
     } else {
       return null; // basically any time a click is made in the home page
     }
-  }
+  };
 
   handleCloseArticle = () => {
     this.setState({articleTimeout: !this.state.articleTimeout}); // ?
     setTimeout(() => this.setState({timeout: !this.state.timeout}), 325); // basically controls how fast the pop up window is going to dissapear
     setTimeout(() => this.setState({isArticleVisible: !this.state.isArticleVisible, article: ''}), 350); // basically controls how fast the home content is going to be displayed again
     return null;
-  }
+  };
 
   handleOpenArticle = article => { // recieves the articlew as a string from the header file
     this.setState({isArticleVisible: !this.state.isArticleVisible, article}); // that way of changing the state property is awesome
     setTimeout(() => this.setState({timeout: !this.state.timeout}), 325);
     setTimeout(() => this.setState({articleTimeout: !this.state.articleTimeout}), 350);
     return null;
-  }
+  };
 
   render() {
     const { location } = this.props;
@@ -81,4 +81,4 @@ export default class IndexPage extends React.Component {
       </Layout>
     )
   }
-}
+};
