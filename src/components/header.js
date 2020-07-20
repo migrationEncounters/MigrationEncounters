@@ -12,7 +12,7 @@ const Header = props => (
 
     <div className="content">
       <div className="inner">
-        <h2>"An epic quote of legendary proportions will go right here"</h2>
+        <h2>"Acknowledging that this part of society exists and that these people are human and have dreams and hopes is very important in order to create a more equal society"</h2>
       </div>
     </div>
     
@@ -69,11 +69,11 @@ const Header = props => (
       </ul>
     </nav>
   </header>
-)
+);
 
 Header.propTypes = {
   onOpenArticle: PropTypes.func,
   timeout: PropTypes.bool,
-}
+};
 
-export default Header
+export default Header;
