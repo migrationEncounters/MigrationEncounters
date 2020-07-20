@@ -7,35 +7,30 @@ import TeamMembers from './aboutUs/teamMembers'
 import Action from './action/action'
 import InTheNews from './inTheNews/inTheNews'
 
-class Main extends React.Component {
-  render() {
-    return (
-      <div
-        ref={this.props.setWrapperRef} // reference from the home page, used for the pop up windows
-        id="main"
-        style={this.props.timeout ? { display: 'flex' } : { display: 'none' }} // switches the display to make things visible or not, change to render and not render
-      >
-
-        <InTheNews
-          onCloseArticle={this.props.onCloseArticle}
-          article={this.props.article}
-          articleTimeout={this.props.articleTimeout}
-        />
-        
-        <Action
-          onCloseArticle={this.props.onCloseArticle}
-          article={this.props.article}
-          articleTimeout={this.props.articleTimeout}
-        />
-
-        <TeamMembers
-          onCloseArticle={this.props.onCloseArticle}
-          article={this.props.article}
-          articleTimeout={this.props.articleTimeout}
-        />
-      </div>
-    )
-  }
+const Main = props => {
+  return (
+    <div
+      ref={props.setWrapperRef} // reference from the home page, used for the pop up windows
+      id="main"
+      style={props.timeout ? { display: 'flex' } : { display: 'none' }} // switches the display to make things visible or not, change to render and not render
+    >
+      <InTheNews
+        onCloseArticle={props.onCloseArticle}
+        article={props.article}
+        articleTimeout={props.articleTimeout}
+      />
+      <Action
+        onCloseArticle={props.onCloseArticle}
+        article={props.article}
+        articleTimeout={props.articleTimeout}
+      />
+      <TeamMembers
+        onCloseArticle={props.onCloseArticle}
+        article={props.article}
+        articleTimeout={props.articleTimeout}
+      />
+    </div>
+  )
 }
 
 Main.propTypes = {
