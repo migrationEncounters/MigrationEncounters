@@ -59,7 +59,7 @@ const InTheNews = props => {
         {dataObject.description}
       </p>
       {dataObject.links.map((article, index) => {
-        if(article.title.length > 48) {
+        if(article.title.length > 30) {
           return (
             <Fragment key={index}>
               <h3 
