@@ -5,7 +5,6 @@ import { Link } from 'gatsby'
 // Import components
 import Layout from '../components/layout'
 
-
 const NotFoundPage = () => (
   <Layout>
     <h1>Migration Encounters</h1>
@@ -13,6 +12,6 @@ const NotFoundPage = () => (
     <p>You just hit a route that doesn&#39;t exist...</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;
