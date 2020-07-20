@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
@@ -16,6 +16,7 @@ const Layout = ({ children, location }) => {
       </div>
     )
   } else {
+    // for pages other than the home page
     content = (
       <div id="wrapper" className="page">
         <div>
@@ -37,18 +38,18 @@ const Layout = ({ children, location }) => {
         }
       `}
       render={data => (
-        <>
+        <Fragment>
           <Helmet
             title={data.site.siteMetadata.title}
             meta={[
-              { name: 'description', content: 'Sample' }, // to change
-              { name: 'keywords', content: 'sample, something' },
+              { name: 'Migration Encounters description', content: 'Sample content ME' }, // to change
+              { name: 'keywords ME', content: 'sample, something Migration Encounters' },
             ]}
           >
             <html lang="en" />
           </Helmet>
           {content}
-        </>
+        </Fragment>
       )}
     />
   )

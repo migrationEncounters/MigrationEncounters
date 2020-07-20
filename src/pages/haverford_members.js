@@ -5,8 +5,8 @@ import Layout from '../components/layout'
 
 const HaverfordMembers = () => (
   <Layout>
-    <h1>Hi from the second page</h1>
-    <p>xxx</p>
+    <h1>Haverford College Members Page</h1>
+    <p>WIP</p>
     <Link to="/">Go back to the homepage</Link>
   </Layout>
 )
